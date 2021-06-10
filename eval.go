@@ -786,6 +786,8 @@ func (e *callExpr) eval(app *app, args []string) {
 		}
 	case "quit":
 		app.quitChan <- struct{}{}
+	case "q":
+		app.quitChan <- struct{}{}
 	case "top":
 		if app.ui.cmdPrefix != "" && app.ui.cmdPrefix != ">" {
 			normal(app)
