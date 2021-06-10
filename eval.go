@@ -681,6 +681,14 @@ func (e *callExpr) eval(app *app, args []string) {
 			app.ui.loadFile(app.nav, true)
 			app.ui.loadFileInfo(app.nav)
 		}
+  case "up-10":
+		if app.ui.cmdPrefix != "" && app.ui.cmdPrefix != ">" {
+			normal(app)
+		}
+		if app.nav.up(e.count * 10) {
+			app.ui.loadFile(app.nav, true)
+			app.ui.loadFileInfo(app.nav)
+		}
 	case "half-up":
 		if app.ui.cmdPrefix != "" && app.ui.cmdPrefix != ">" {
 			normal(app)
@@ -702,6 +710,14 @@ func (e *callExpr) eval(app *app, args []string) {
 			normal(app)
 		}
 		if app.nav.down(e.count) {
+			app.ui.loadFile(app.nav, true)
+			app.ui.loadFileInfo(app.nav)
+		}
+  case "down-10":
+		if app.ui.cmdPrefix != "" && app.ui.cmdPrefix != ">" {
+			normal(app)
+		}
+		if app.nav.down(e.count * 10) {
 			app.ui.loadFile(app.nav, true)
 			app.ui.loadFileInfo(app.nav)
 		}
