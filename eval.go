@@ -672,6 +672,8 @@ func insert(app *app, arg string) {
 }
 
 func (e *callExpr) eval(app *app, args []string) {
+  const LARGE = 10
+
 	switch e.name {
 	case "up":
 		if app.ui.cmdPrefix != "" && app.ui.cmdPrefix != ">" {
@@ -681,11 +683,11 @@ func (e *callExpr) eval(app *app, args []string) {
 			app.ui.loadFile(app.nav, true)
 			app.ui.loadFileInfo(app.nav)
 		}
-  case "up-10":
+  case "up-large":
 		if app.ui.cmdPrefix != "" && app.ui.cmdPrefix != ">" {
 			normal(app)
 		}
-		if app.nav.up(e.count * 10) {
+		if app.nav.up(e.count * LARGE) {
 			app.ui.loadFile(app.nav, true)
 			app.ui.loadFileInfo(app.nav)
 		}
@@ -713,11 +715,11 @@ func (e *callExpr) eval(app *app, args []string) {
 			app.ui.loadFile(app.nav, true)
 			app.ui.loadFileInfo(app.nav)
 		}
-  case "down-10":
+  case "down-large":
 		if app.ui.cmdPrefix != "" && app.ui.cmdPrefix != ">" {
 			normal(app)
 		}
-		if app.nav.down(e.count * 10) {
+		if app.nav.down(e.count * LARGE) {
 			app.ui.loadFile(app.nav, true)
 			app.ui.loadFileInfo(app.nav)
 		}

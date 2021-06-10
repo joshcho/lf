@@ -21,11 +21,13 @@ The following commands are provided by lf:
 
     quit                     (default 'q')
     up                       (default 'k' and '<up>')
+    up-large                 (default 'K')
     half-up                  (default '<c-u>')
     page-up                  (default '<c-b>' and '<pgup>')
     down                     (default 'j' and '<down>')
     half-down                (default '<c-d>')
     page-down                (default '<c-f>' and '<pgdn>')
+    down-large               (default 'J')
     updir                    (default 'h' and '<left>')
     open                     (default 'l' and '<right>')
     top                      (default 'gg' and '<home>')

@@ -112,11 +112,13 @@ func init() {
 	gOpts.keys = make(map[string]expr)
 
 	gOpts.keys["k"] = &callExpr{"up", nil, 1}
+	gOpts.keys["K"] = &callExpr{"up-large", nil, 1}
 	gOpts.keys["<up>"] = &callExpr{"up", nil, 1}
 	gOpts.keys["<c-u>"] = &callExpr{"half-up", nil, 1}
 	gOpts.keys["<c-b>"] = &callExpr{"page-up", nil, 1}
 	gOpts.keys["<pgup>"] = &callExpr{"page-up", nil, 1}
 	gOpts.keys["j"] = &callExpr{"down", nil, 1}
+	gOpts.keys["J"] = &callExpr{"down-large", nil, 1}
 	gOpts.keys["<down>"] = &callExpr{"down", nil, 1}
 	gOpts.keys["<c-d>"] = &callExpr{"half-down", nil, 1}
 	gOpts.keys["<c-f>"] = &callExpr{"page-down", nil, 1}
